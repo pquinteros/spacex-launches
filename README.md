@@ -1,10 +1,4 @@
-![image](https://github.com/pquinteros/spacex-launches/assets/362610/44618948-bedd-45a1-af48-50817e6655a2)# Astro SpaceX
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+# Astro SpaceX
 
 ![Performance](https://github.com/pquinteros/spacex-launches/assets/362610/1d54f909-8973-4b3b-85db-223acd4fe340)
 
