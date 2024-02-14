@@ -1,8 +1,4 @@
-# Astro Starter Kit: Basics
-
-```sh
-npm create astro@latest -- --template basics
-```
+![image](https://github.com/pquinteros/spacex-launches/assets/362610/44618948-bedd-45a1-af48-50817e6655a2)# Astro SpaceX
 
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
 [![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
@@ -10,7 +6,8 @@ npm create astro@latest -- --template basics
 
 > 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+![performance](https://github.com/pquinteros/spacex-launches/assets/362610/a30d62c7-3526-421e-a94d-97b9a7faa460)
+
 
 ## 🚀 Project Structure
 
