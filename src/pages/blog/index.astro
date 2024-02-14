@@ -1,0 +1,35 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CardBlog from '../../components/CardBlog.astro';
+import { getCollection, getEntry } from 'astro:content';
+import {type Post} from '../../types/posts'
+const allBlogPosts = await getCollection('blog');
+---
+<Layout title="Welcome to Blog.">
+  <main class="mt-3">
+    <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4" role="list" aria-label="Posts">
+    { 
+    allBlogPosts.map((blog:Post) => (
+      <CardBlog
+        slug={blog.slug}
+        title={blog.data.title}
+        image={blog.data.image}
+        tags={blog.data.tags}
+      />
+      ))
+    }
+    </ul>
+  </main>
+</Layout>
+
+<style>
+   main {
+		margin: auto;
+		padding: 1rem;
+		width: 1100px;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+</style>

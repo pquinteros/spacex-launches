@@ -1,0 +1,73 @@
+<div class="w-full">
+  <nav class="relative right-0 nav" role="navigation" aria-label="Space X Launches">
+    <ul class="font-semibold relative flex flex-wrap p-1 list-none rounded-lg bg-blue-gray-50/60 gap-4">
+      <li class="z-30 flex-auto text-center link-card">
+        <a href="/" class:list={[
+          'z-30 flex items-center justify-center w-full px-0 py-1 mb-0 transition-all ease-in-out rounded-lg cursor-pointer text-slate-300 border hover:bg-slate-950 border-slate-600'
+          ]}
+          data-astro-prefetch
+          >
+          <span>Últimos lanzamientos</span> 
+        </a>
+      </li>
+      <li class="z-30 flex-auto text-center link-card">
+        <a 
+        href="/proximos"
+        class:list={[
+          'z-30 flex items-center justify-center w-full px-0 py-1 mb-0 transition-all ease-in-out rounded-lg cursor-pointer text-slate-300 border hover:bg-slate-950 border-slate-600'
+          ]}
+           data-astro-prefetch
+           >
+          <span>Próximos lanzamientos</span>
+        </a>
+      </li>
+      <li class="z-30 flex-auto text-center link-card">
+        <a href="/blog"
+          class:list={[
+          'z-30 flex items-center justify-center w-full px-0 py-1 mb-0 transition-all ease-in-out rounded-lg cursor-pointer text-slate-300 border hover:bg-slate-950 border-slate-600'
+          ]}
+          data-astro-prefetch
+          >
+          <span>Blog</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div> 
+<script src="../scripts/navigation.js"></script>
+<style>
+  .link-card {
+		list-style: none;
+		display: flex;
+		background-image: none;
+		background-size: 400%;
+		border-radius: 8px;
+		background-position: 100%;
+		transition: background-position 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+		box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+	}
+	.link-card > a {
+		width: 100%;
+		text-decoration: none;
+		border-radius: 8px;
+		color: white;
+		background-color: var(--bg-color);
+		opacity: 0.8;
+	}
+  .link-card:is(:hover, :focus-within) {
+		background-position: 0;
+		background-image: var(--accent-gradient);
+	}
+	.link-card:is(:hover, :focus-within) h2 {
+		color: rgb(var(--accent-light));
+	}
+  .active {
+		background-size: 400% !important;
+		background-image: linear-gradient(
+			45deg,
+			rgb(var(--accent),0.14),
+			rgb(var(--accent-light),0.14) 40%,
+			white 50%
+		);
+  }
+</style>

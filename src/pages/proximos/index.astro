@@ -1,0 +1,32 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getUncomingLauches } from '../../services/launches';
+import {type RootObject} from '../../types/api'
+const launches:any = await getUncomingLauches()
+---
+<Layout title="Welcome to Próximos lanzamientos.">
+  <main class="mt-3">
+    <ul class="" role="list" aria-label="Proximos lanzamientos">
+      {
+        launches.map((launch:RootObject) => (
+        <li class="border-b-2 p-3 border-gray-800">
+          {launch.mission_name} - 
+          {launch.launch_year}
+        </li>
+        ))
+      }
+      
+    </ul>
+  </main>
+</Layout>
+<style>
+  main {
+   margin: auto;
+   padding: 1rem;
+   width: 1100px;
+   max-width: calc(100% - 2rem);
+   color: white;
+   font-size: 20px;
+   line-height: 1.6;
+ }
+</style>

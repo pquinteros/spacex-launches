@@ -1,0 +1,71 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getLauches, getLauch } from '../../services/launches'
+import {type RootObject} from '../../types/api'
+
+export async function getStaticPaths() {
+  const launches:any = await getLauches()
+  return launches.map((launch:RootObject) => {
+    return {params: { id: launch.flight_number}}
+  })
+}
+
+const { id } = Astro.params;
+const launch = await getLauch(id)
+console.log('launch:', launch)
+---
+<Layout title="Lanzamiento">
+  <main>
+    <figure class="flex justify-center py-4 min-h-72">
+      {launch.links.mission_patch_small && <img
+        src={launch.links.mission_patch_small}
+        alt={launch.mission_name}
+				class="z-10"
+        style={`view-transition-name: image-${launch.flight_number}`}
+      />}
+    </figure>
+    <div class="text-center">
+    <h1 class="text-5xl mb-2 title">{launch.mission_name}</h1>
+    <div 
+    style={`view-transition-name: details-${launch.flight_number}`}
+    class="details"
+    >
+      {launch.details}
+    </div>
+  </div>
+  </main>
+</Layout>
+<style>
+  main {
+		margin: auto;
+		padding: 1rem;
+		width: 1100px;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+  @keyframes fadeInUp {
+  0% {
+    transform: translateY(55px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+:root {
+  --time: 1s;
+}
+
+.title {
+  animation: var(--time) fadeInUp backwards;
+  animation-delay: 0.15s;
+}
+.details {
+  animation: var(--time) fadeInUp backwards;
+  animation-delay: 0.3s;
+}
+</style>

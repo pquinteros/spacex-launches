@@ -1,0 +1,41 @@
+---
+import Layout from '../layouts/Layout.astro';
+import CardLaunch from '../components/CardLaunch.astro';
+import Footer from '../components/Footer.astro';
+import { getLauches } from '../services/launches';
+import {type RootObject} from '../types/api'
+const launches:any = await getLauches()
+---
+<Layout title="Welcome to Astro.">
+	<main>
+		<ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" role="list" aria-label="Launches">
+			{
+				launches.map((launch:RootObject) => (
+					<CardLaunch 
+					mission_patch_small={launch.links.mission_patch_small}
+					mission_name={launch.mission_name}
+					flight_number={launch.flight_number}
+					details={launch.details}
+					status={launch.launch_success}
+					/>
+				))
+			}
+		</ul>
+	</main>
+	<Footer/>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 1100px;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+	.h1{
+  view-transition-name: hero;
+	}
+</style>
