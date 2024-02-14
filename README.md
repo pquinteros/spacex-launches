@@ -1,6 +1,6 @@
 # Astro SpaceX
 
-![Performance](https://github.com/pquinteros/spacex-launches/assets/362610/1d54f909-8973-4b3b-85db-223acd4fe340)
+![image](https://github.com/pquinteros/spacex-launches/assets/362610/d86558e4-5e35-4d40-a822-ca67960bb260)
 
 
 Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
